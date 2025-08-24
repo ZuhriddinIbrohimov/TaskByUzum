@@ -3,10 +3,17 @@ import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
+        /// first task
         word_counter();
+
+        /// second task
+        int[] arr = {1, 2, 5, 6, 7, 8};
+        int target = 11;
+        twoSum(arr, target);
+
     }
 
-    public static void word_counter(){
+    public static void word_counter() {
         String str = "hello world qwerty world";
         int n = 2;
 
@@ -23,5 +30,18 @@ public class Main {
             }
         }
     }
+
+    public static void twoSum(int[] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] == target) {
+                    System.out.println(arr[i] + " + " + arr[j] + " = " + target);
+                }
+            }
+        }
+    }
+
+
+
 
 }
