@@ -11,6 +11,9 @@ public class Main {
         int target = 11;
         twoSum(arr, target);
 
+        /// fourth task
+        int [] nums = {1,1,1,2,2,3,3,3,3};
+        two_pointers(nums);
     }
 
     public static void word_counter() {
@@ -41,7 +44,18 @@ public class Main {
         }
     }
 
-
-
-
+    public static int two_pointers(int[] nums){
+        int j = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[j]) {
+                nums[++j] = nums[i];
+            }
+        }
+        // unikal elementlarni chiqaramiz
+        for (int k = 0; k <= j; k++) {
+            System.out.print(nums[k] + " ");
+        }
+        System.out.println();
+        return j + 1;
+    }
 }
